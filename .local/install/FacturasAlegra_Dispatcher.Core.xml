@@ -10,12 +10,6 @@
             </summary>
             <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
         </member>
-        <member name="M:FacturasAlegra_Dispatcher.WorkflowRunnerService.DataRowToDictionary(System.Data.DataRow,System.Boolean)">
-            <summary>
-            Invokes the DataRowToDictionary.cs
-            </summary>
-            <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        </member>
         <member name="M:FacturasAlegra_Dispatcher.WorkflowRunnerService.DownloadFile(System.String,System.Boolean)">
             <summary>
             Invokes the DownloadFile.xaml

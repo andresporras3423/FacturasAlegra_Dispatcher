@@ -2,11 +2,6 @@
   "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
   "entryPoints": [
     {
-      "filePath": "DataRowToDictionary.cs",
-      "uniqueId": "0bc8ca3f-ae12-4cdd-9f00-1ce064192941",
-      "type": "process"
-    },
-    {
       "filePath": "Main.xaml",
       "uniqueId": "32c53fbb-e9d0-4d21-8534-a660496468ef",
       "type": "process",
