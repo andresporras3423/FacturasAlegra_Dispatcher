@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="_eESUr9rwESYREliJ1DNFg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/7nTn6-UfB0yL_uxO2-6HxQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:p="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="a9dCtjarIkyjUP7DEAoIHA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAA7lJREFUaEPVWU1uEzEU9hF6A3IEjtAj9AbkBvQG7Q3aHRLMZCqxYuUkEDYgDSAQZZMs0kVVVE2bRbNo0YAQC9gM+jx1sJ89M/b8JOGTvkU8b+zv+b3nnwljbYBHO4yHfTYKj9g45GwUJmwUpmwUZgoTNh7Ewga2/EmPdrNeQPTL6OBelCrUg4PZ+p2Rws0ZbsZxGHXvSBfCKTFG6+BRT4SbDtYdk/ai8WrwqPNZtzNlPNijcvyQpwzteL2snVLbIF7S2wmEjnayaSKVnSAKdiM5X8XUrbDzXZS+vCUczKhcHR3m/c7r50ZbLfJnh1R2jjx1zBdqEoL70/dZtPiapX9+Z4fnU+M5fceRqTgNGBiGkcXYmRC0+2mSHV2eZfHtMqPoTz9o9vvz0yz59dNod6IRhYazD9GY5TJQofHdPydrOEKikB+FqZEzdz9ONLE2qAIRLRvgCPqi/VupRaGFcw4GLwNSRtoWOYw+nGsDx/h89v3TJ1pcGG0QWAa1iG22EN9788Lot5QijTzTB/kOqDMKYubK6kB1+mRxQR9nD99xY6xK8qd9HBuOjQcFRB5rg8b6oPvzz9pzFcPl1cpOLWBAjQ6iwJdXbrUA7a5XQnRM81zk7ETPWWojgXZpQ1cg2f54frqK4vHlmaHBIA+GWP+djg5FwuLbG82uqECBB/c5rqYQNju0HZxPNVs4QjVYmODsQxsN0s4pUBeqPWbPBlk36nNEVk1NCJ/9+Jbx5bVLUaeVDux9ebvqvAxwUr6DgrZFTEZLRgk7Nn7DFkXulPeURoNCW96XQXWi6F3UjFyxULwQXUu4ZNnZ33amqUKVE3LFQRohdZw3riIWFXFV3pehzAnMPNpk7tNxPZkwNgzwKVB7gM6bYvb9TitCzLyErAWHIi3nMIgLNzIsbzT8vsD76ixDsFxC1SjVptjIKo4SbTiCWlJnWzrSOIWgXRyI6AML23CE31wbK06jNFpd8h2PEyAcoWcZX8h1HxsbHMJBzt8R9YKPy4FhUE6ZBk2ighUJk4FDoPdyKtJn5YBIo8L9oIqYRYjA9o9jgA0QC2dhA1u84y1apfGNqEYUqijXe9remPgvwUDDKKyVxuxLdBCF1ml8UqFo4YLfIRMq18R//3EXqNidN0Lvf2u2qR4q874I2+BEbfES+b81m6iJVN9tmyAvbOvFpxviH3zXgvVB9ymVNk+ZKiAaPDixDN6EuXDrHxddQTgS9tkwqL/x4Uq4duE2SGdwxRsHseVDQSraxgEXNsK2HdF/ATAm8tos/Fv4AAAAAElFTkSuQmCC" Reference="ryTY7yfCSU-sIFT8MhIkwQ/7nTn6-UfB0yL_uxO2-6HxQ" Selector="&lt;html app='chrome.exe' title='Facturas de venta' /&gt;" Url="[in_TransactionItem(&quot;Estado&quot;).ToString]" Version="V2">
+      <TargetApp.Arguments>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.Arguments>
+      <TargetApp.WorkingDirectory>
+        <p:InArgument x:TypeArguments="x:String" />
+      </TargetApp.WorkingDirectory>
+      <imageRef attrName="InformativeScreenshot" originalValue="9f429dd93ceb155862e57484fd683f64.jpg" xmlns="">0FiyoH0HHg0a_vtzFhekC5A</imageRef>
+    </TargetApp>
+    <scg:List x:TypeArguments="ObjectRepositoryVariableData" x:Key="Variables" Capacity="1" />
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

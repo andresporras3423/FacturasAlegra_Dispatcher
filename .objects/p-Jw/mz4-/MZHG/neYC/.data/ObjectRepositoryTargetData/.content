@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="OsFwR3aSrEyzHJTBTQxNzw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.alegra.com" CVScreenId="4df3fc44-a301-4dca-bd21-3c062438427c" CvElementArea="1879, 197, 26, 26" CvType="Icon" DesignTimeRectangle="1882, 200, 20, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='user-menu__avatar' parentid='organization-menu-button' tag='DIV' /&gt;" Guid="91a56693-9b1a-46ae-a518-dd83dd6e9544" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEHSURBVEhLY/hPY8CALkBtMPAWvHr37/+th///n7v+7//xSxAMYoPEQHKEAE4LQJrPIhmKC4PU4LMIqwX3n/3HMIgQBunBBjAsIMdwfJagWADyKromUjF6cKFYQEyYE8IgM5AB3AJ8rj988t3/faeRxX7+33fk8//DFzDVgjCyL+AWgJIdukIYnlMc+t+/+zGS2PH/6Y4F/1t2Y6oFYZBZGBYgp3N0TKoFILMwLEBXhG6Bd/ON/zuPvIPiPf+T8VgAwiRbYOyR+t8tEIYT/puTagHNg4jmkYwvmZJqAdZkCgI0zWgggM8XxGK8RQUI0LSwgwFyLMFmOAhgtQAEaFrhIAOaVZnUAgC6RVbuloY6hQAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Alegra Software Contable' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="4df3fc44-a301-4dca-bd21-3c062438427c" DesignTimeRectangle="1876, 194, 33, 33" FuzzySelectorArgument="&lt;webctrl type='' class='user-menu__profile only-avatar' parentid='organization-menu-button' tag='DIV' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='H' /&gt;" Guid="1e19b7f1-fcc6-4520-bd05-49838fc1247b" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="76c425b91b64ac03291a52b85a7f59eb.jpg" xmlns="">0P77mVnRJaUKIvruNmfyiSA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

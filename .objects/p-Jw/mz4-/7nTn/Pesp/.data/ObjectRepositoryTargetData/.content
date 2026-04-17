@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uMSK4hAoD0u8SfUAgfbEjw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="chatgpt.com/g/g-p-6803eaad2e548191b719de0fa036da85/c/69d477c1-0da8-83e9-822e-e5f872c6d332" CVScreenId="5b79b300-7f09-416e-a778-b4e6021cc1fe" CvElementArea="798, 314, 156, 35" CvTextArea="844, 324, 88, 16" CvTextArgument="Descargar PDF" CvType="Button" DesignTimeRectangle="846, 323, 85, 16" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Descargar PDF' parentid='button_download_pdf' tag='SPAN' /&gt;" Guid="80af6c53-9f81-40e6-b5c3-0939e1e536b7" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Factura de venta PL358' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="14ac083a94feba6c30b5cf80be203ff9.jpg" xmlns="">0HRo_-D7bNkagr1cpGLdQ_Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

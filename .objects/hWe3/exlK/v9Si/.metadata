@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Guardar como",
+  "Type": "Screen",
+  "Id": "v9SiTQtnQEG16TNm4Hmlcw",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/v9SiTQtnQEG16TNm4Hmlcw",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/exlK-GH0CEu9E2tm5p1D-A",
+  "Created": "2026-04-13T21:18:34.5289042Z",
+  "Updated": "2026-04-13T21:18:34.5289042Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

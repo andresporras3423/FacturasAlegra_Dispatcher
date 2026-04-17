@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Chrome Login - Ingreso a Alegra Contabilidad",
+  "Type": "App",
+  "Id": "p-JwHVUepkyLbghhK8QMcw",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/p-JwHVUepkyLbghhK8QMcw",
+  "Created": "2026-04-09T14:21:32.6688661Z",
+  "Updated": "2026-04-09T14:21:32.6688661Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

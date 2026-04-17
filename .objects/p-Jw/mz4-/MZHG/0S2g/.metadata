@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Enviar link mágico",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "0S2gHPFR20WsYR48TLstZQ",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/0S2gHPFR20WsYR48TLstZQ",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/MZHGqS0Tv0aj8gXxKje8KQ",
+  "Created": "2026-04-09T14:29:35.2617833Z",
+  "Updated": "2026-04-09T14:29:35.2617833Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

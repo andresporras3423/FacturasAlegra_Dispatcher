@@ -1,0 +1,33 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "DataRowToDictionary.cs",
+      "uniqueId": "0bc8ca3f-ae12-4cdd-9f00-1ce064192941",
+      "type": "process"
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "32c53fbb-e9d0-4d21-8534-a660496468ef",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "in_OrchestratorQueueName": {
+            "type": "string",
+            "description": "Allows the Orchestrator queue name to be passed as an argument, instead of only being defined in the configuration file."
+          },
+          "in_OrchestratorQueueFolder": {
+            "type": "string",
+            "description": "Allows the Orchestrator folder name where the queue is created to be passed as an argument, instead of only being defined in the configuration file."
+          },
+          "processMonth": {
+            "type": "string",
+            "x-default-expression": "New Date(Date.Now.Year, Date.Now.Month, 1).ToString(\"dd/MM/yyyy\")"
+          }
+        },
+        "required": []
+      }
+    }
+  ]
+}

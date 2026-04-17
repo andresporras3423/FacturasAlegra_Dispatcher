@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Ingresar desde mi correo",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "lcOD9BkJnkWa_psO7sWP8A",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/lcOD9BkJnkWa_psO7sWP8A",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/MZHGqS0Tv0aj8gXxKje8KQ",
+  "Created": "2026-04-09T14:26:14.1762551Z",
+  "Updated": "2026-04-09T14:26:14.1762551Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

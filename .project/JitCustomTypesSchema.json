@@ -1,0 +1,111 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 1,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|r26SRDzjb88GESxhtJOHyjTPO0OGMhjpxkSgrV1pj4",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Número",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Cliente",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Creación",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Vencimiento",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Total",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Por cobrar",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Estado DIAN",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Estado",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Url",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|6Neg7cbz3OCt13Ohsg9CA8bqcyxvG36SjeeEoTbo4AY",
+        "assemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    },
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 2,
+        "idRef": "NExtractDataGeneric`1_2",
+        "hash": "NExtractDataGeneric`1_2|DataTable|r26SRDzjb88GESxhtJOHyjTPO0OGMhjpxkSgrV1pj4",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Número",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Url",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Cliente",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Creación",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Vencimiento",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Total",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Por cobrar",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Estado DIAN",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Estado",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable2",
+        "hash": "NExtractDataGeneric`1_2|DataTable|mven2MntggdA743rbmAIq5tb3TbhCltR5JmO8UuOFA",
+        "assemblyName": "Studio.Generated.TypedDataTable2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Correo electrónico",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "_Uz2UEtzr0SbxUY8EN1lVQ",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/_Uz2UEtzr0SbxUY8EN1lVQ",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/MZHGqS0Tv0aj8gXxKje8KQ",
+  "Created": "2026-04-09T14:28:15.0203953Z",
+  "Updated": "2026-04-09T14:28:15.0203953Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

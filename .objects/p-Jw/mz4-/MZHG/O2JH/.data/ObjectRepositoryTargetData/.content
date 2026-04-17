@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="TPJpfKP1Y0upfti1emZbfA" Reference="ryTY7yfCSU-sIFT8MhIkwQ/O2JHdy2dnEuTUJ9rbfskvg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.alegra.com/invoice" CVScreenId="24845551-7145-473f-ab8c-eddc61d6052c" DesignTimeRectangle="1584, 841, 32, 32" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='BUTTON' class='s-button small default text s-button--only-icon' idx='2' /&gt;" Guid="b88b9397-e805-4f3e-9bab-7e0206b6856e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAChSURBVFhH7dS7CsJAEIXhvE5IoaYQWxGCb64QAipuEtfLq4yM5TYHnBGnOH8523www1YSrKoc/DuCUAShCEIRhCIIRRDKBMqPl8z5WY5NmUDTfJfFupNrupVPX2cCaadLkqbdSRp9UGaQ1g9nN5QLSDschw9K12jJFVQvtzFAoVYW6qh1PavN3g2jmUDjlGN9jL+IIBRBKIJQBKEIQoUDvQEvLBBGbQb5DgAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Facturas de venta' /&gt;" SearchSteps="Selector, Image" Version="V6" WaitForReadyArgument="None">
+      <imageRef attrName="InformativeScreenshot" originalValue="1954ce8e895c296f104d9b508e22a620.jpg" xmlns="">0jRd0rYhi0EKuJgEgTbCeCg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttributeGeneric</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

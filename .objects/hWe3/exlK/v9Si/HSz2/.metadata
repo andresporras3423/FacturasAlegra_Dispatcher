@@ -1,0 +1,14 @@
+﻿{
+  "Name": "&Guardar",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "HSz2MEklLEKh21Uyj7pTsA",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/HSz2MEklLEKh21Uyj7pTsA",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/v9SiTQtnQEG16TNm4Hmlcw",
+  "Created": "2026-04-13T21:21:09.8813367Z",
+  "Updated": "2026-04-13T21:21:09.8813367Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

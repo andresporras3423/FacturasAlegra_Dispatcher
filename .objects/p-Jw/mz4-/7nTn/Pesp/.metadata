@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Descargar PDF",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "PespI0M9zEqeJcXsXPD9NQ",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/PespI0M9zEqeJcXsXPD9NQ",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/7nTn6-UfB0yL_uxO2-6HxQ",
+  "Created": "2026-04-13T01:14:03.5450082Z",
+  "Updated": "2026-04-13T01:14:03.5450082Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

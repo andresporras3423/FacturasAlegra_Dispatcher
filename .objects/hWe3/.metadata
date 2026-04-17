@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Guardar como",
+  "Type": "App",
+  "Id": "hWe3NMZIdkm9seGKRntvoA",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/hWe3NMZIdkm9seGKRntvoA",
+  "Created": "2026-04-13T21:18:34.4765683Z",
+  "Updated": "2026-04-13T21:18:34.4765683Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

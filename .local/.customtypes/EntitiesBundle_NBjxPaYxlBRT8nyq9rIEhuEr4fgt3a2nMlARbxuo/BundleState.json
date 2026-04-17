@@ -1,0 +1,22 @@
+{
+  "assemblyStates": {
+    "Studio.Generated.TypedDataTable1": {
+      "namespace": "System.Data",
+      "providerName": "TypedDataTable",
+      "key": {
+        "name": "Studio.Generated.TypedDataTable1",
+        "hash": "NExtractDataGeneric\u00601_1|DataTable|r26SRDzjb88GESxhtJOHyjTPO0OGMhjpxkSgrV1pj4",
+        "assemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    },
+    "Studio.Generated.TypedDataTable2": {
+      "namespace": "System.Data",
+      "providerName": "TypedDataTable",
+      "key": {
+        "name": "Studio.Generated.TypedDataTable2",
+        "hash": "NExtractDataGeneric\u00601_2|DataTable|r26SRDzjb88GESxhtJOHyjTPO0OGMhjpxkSgrV1pj4",
+        "assemblyName": "Studio.Generated.TypedDataTable2"
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Facturas de venta",
+  "Type": "Screen",
+  "Id": "7nTn6-UfB0yL_uxO2-6HxQ",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/7nTn6-UfB0yL_uxO2-6HxQ",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/mz4-cTv5KE67Pfx_HktPbQ",
+  "Created": "2026-04-13T00:54:20.9387411Z",
+  "Updated": "2026-04-13T00:54:20.9387411Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

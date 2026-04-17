@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="t-TOizRIV0SGgqKTNYJyNw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.alegra.com/user/login/magic-link" CVScreenId="ce85951d-be26-46e8-9fcd-cfef9b7eb920" CvElementArea="786, 516, 365, 48" CvTextArea="897, 531, 143, 21" CvTextArgument="Enviar link mágico" CvType="Button" DesignTimeRectangle="790, 518, 358, 44" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='login-btn' tag='BUTTON' /&gt;" Guid="23206f90-592b-42fb-b413-e8e49d86df9a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0ebf256cc2506c1b43e4820245b183b4.jpg" xmlns="">0RUa_XWo5I0KpuT5aJbxj5A</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
