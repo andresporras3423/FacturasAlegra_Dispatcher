@@ -56,6 +56,8 @@
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>System.Linq.Expressions</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Org.BouncyCastle.Utilities.Zlib</x:String>
+      <x:String>System.Globalization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -124,11 +126,16 @@
       <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
       <AssemblyReference>System.Data.Common</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>BouncyCastle.Cryptography</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap:VirtualizedContainerService.HintSize="750,2915.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Boolean" Name="continueExtraction" />
+      <Variable x:TypeArguments="x:Boolean" Name="continueExtraction">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:Boolean" Value="True" />
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -210,7 +217,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[Date.Parse(CurrentRow(&quot;Creacion&quot;).ToString) &gt; in_minDate]" sap:VirtualizedContainerService.HintSize="451.2,683.2" sap2010:WorkflowViewState.IdRef="If_2">
+                          <If Condition="[DateTime.ParseExact(CurrentRow(&quot;Creación&quot;).ToString.Trim,&quot;dd/MM/yyyy&quot;,System.Globalization.CultureInfo.InvariantCulture)&gt; in_minDate]" sap:VirtualizedContainerService.HintSize="451.2,683.2" sap2010:WorkflowViewState.IdRef="If_2">
                             <If.Then>
                               <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                 <sap:WorkflowViewStateService.ViewState>

@@ -3,9 +3,9 @@ Framework/KillAllProcesses.xaml|638996668260000000
 Framework/InitAllSettings.xaml|638996668260000000
 Framework/GetTransactionData.xaml|639116373431735557
 DownloadFile.xaml|639118053273960465
-getfacturas.xaml|639118079396900081
-Framework/InitAllApplications.xaml|639115346015971726
-Framework/Process.xaml|639119834489745172
+getfacturas.xaml|639120666535405955
+Framework/InitAllApplications.xaml|639120600991566133
+Framework/Process.xaml|639120702425686865
 Main.xaml|639116371982759965
 Framework/RetryCurrentTransaction.xaml|638996668260000000
 Framework/TakeScreenshot.xaml|638996668260000000

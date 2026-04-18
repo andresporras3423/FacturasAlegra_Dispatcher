@@ -14,6 +14,7 @@ namespace FacturasAlegra_Dispatcher.ObjectRepository
         public static class __Guardar_como
         {
             static string _reference = "ryTY7yfCSU-sIFT8MhIkwQ/hWe3NMZIdkm9seGKRntvoA";
+            public static _Implementation.___Guardar_como.__Chrome_Facturas_de_venta Chrome_Facturas_de_venta { get; private set; } = new _Implementation.___Guardar_como.__Chrome_Facturas_de_venta();
             public static _Implementation.___Guardar_como.__Guardar_como Guardar_como { get; private set; } = new _Implementation.___Guardar_como.__Guardar_como();
         }
     }
@@ -37,35 +38,6 @@ namespace FacturasAlegra_Dispatcher._Implementation
         public IElementDescriptor Element { get; set; }
     }
 
-    namespace ___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Facturas_de_venta
-    {
-        public class __Descargar_PDF : IElementDescriptor
-        {
-            private readonly IScreenDescriptor _screenDescriptor;
-            private readonly IElementDescriptor _parentElementDescriptor;
-            private readonly IElementDescriptorDefinition _elementDescriptor;
-
-            public IElementDescriptorDefinition GetDefinition()
-            {
-                return _elementDescriptor;
-            }
-
-            public __Descargar_PDF(IScreenDescriptor screenDescriptor, IElementDescriptor parentElementDescriptor)
-            {
-                _screenDescriptor = screenDescriptor;
-                _parentElementDescriptor = parentElementDescriptor;
-                _elementDescriptor = new ElementDescriptorDefinition
-                {
-                    Reference = "ryTY7yfCSU-sIFT8MhIkwQ/PespI0M9zEqeJcXsXPD9NQ",
-                    DisplayName = "Descargar PDF",
-                    Element = this,
-                    ParentElement = _parentElementDescriptor,
-                    Screen = screenDescriptor
-                };
-            }
-        }
-    }
-
     namespace ___Chrome_Login___Ingreso_a_Alegra_Contabilidad
     {
         public class __Chrome_Facturas_de_venta : IScreenDescriptor
@@ -85,10 +57,7 @@ namespace FacturasAlegra_Dispatcher._Implementation
                     DisplayName = "Chrome Facturas de venta",
                     Screen = this
                 };
-                Descargar_PDF = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Facturas_de_venta.__Descargar_PDF(this, null);
             }
-
-            public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Facturas_de_venta.__Descargar_PDF Descargar_PDF { get; private set; }
         }
     }
 
@@ -299,6 +268,61 @@ namespace FacturasAlegra_Dispatcher._Implementation
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Ingresar_desde_mi_correo Ingresar_desde_mi_correo { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Label Label { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__svg svg { get; private set; }
+        }
+    }
+
+    namespace ___Guardar_como._Chrome_Facturas_de_venta
+    {
+        public class __Descargar_PDF : IElementDescriptor
+        {
+            private readonly IScreenDescriptor _screenDescriptor;
+            private readonly IElementDescriptor _parentElementDescriptor;
+            private readonly IElementDescriptorDefinition _elementDescriptor;
+
+            public IElementDescriptorDefinition GetDefinition()
+            {
+                return _elementDescriptor;
+            }
+
+            public __Descargar_PDF(IScreenDescriptor screenDescriptor, IElementDescriptor parentElementDescriptor)
+            {
+                _screenDescriptor = screenDescriptor;
+                _parentElementDescriptor = parentElementDescriptor;
+                _elementDescriptor = new ElementDescriptorDefinition
+                {
+                    Reference = "ryTY7yfCSU-sIFT8MhIkwQ/PespI0M9zEqeJcXsXPD9NQ",
+                    DisplayName = "Descargar PDF",
+                    Element = this,
+                    ParentElement = _parentElementDescriptor,
+                    Screen = screenDescriptor
+                };
+            }
+        }
+    }
+
+    namespace ___Guardar_como
+    {
+        public class __Chrome_Facturas_de_venta : IScreenDescriptor
+        {
+            public IScreenDescriptorDefinition GetDefinition()
+            {
+                return _screenDescriptor;
+            }
+
+            private readonly ScreenDescriptorDefinition _screenDescriptor;
+
+            public __Chrome_Facturas_de_venta()
+            {
+                _screenDescriptor = new ScreenDescriptorDefinition
+                {
+                    Reference = "ryTY7yfCSU-sIFT8MhIkwQ/KNxWHCspMUa8Z6HHeHBU2w",
+                    DisplayName = "Chrome Facturas de venta",
+                    Screen = this
+                };
+                Descargar_PDF = new _Implementation.___Guardar_como._Chrome_Facturas_de_venta.__Descargar_PDF(this, null);
+            }
+
+            public _Implementation.___Guardar_como._Chrome_Facturas_de_venta.__Descargar_PDF Descargar_PDF { get; private set; }
         }
     }
 

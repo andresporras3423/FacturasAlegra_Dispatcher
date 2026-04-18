@@ -110,7 +110,7 @@
       <AssemblyReference>FacturasAlegra_Dispatcher.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="753.2,790.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="698,790.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -134,7 +134,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Nombre de archivo'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="e2e22737-5044-41d5-9137-5e89e9785c1a" Text="[in_path]" Version="V5">
+              <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Nombre de archivo'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="e2e22737-5044-41d5-9137-5e89e9785c1a" Text="[in_path]" Version="V5">
                 <uix:NTypeInto.Target>
                   <uix:TargetAnchorable CVScreenId="c94ee050-134a-492e-9ec6-24d31d3e3383" ContentHash="sjtKc4KeS0aOSYb44RpfCw" CvElementArea="151, 654, 1757, 30" CvType="InputBox" DesignTimeRectangle="169, 660, 1712, 22" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;wnd aaname='Panel del explorador' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='Nombre de archivo:' cls='ComboBox' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd ctrlid='1001' matching:ctrlid='fuzzy' fuzzylevel:ctrlid='0.0' /&gt;" Guid="4811837b-c575-486e-8b2e-772b12070f3d" InformativeScreenshot="c9f94529faa675f6007b359e4be6f6bd.jpg" IsResponsive="True" Reference="ryTY7yfCSU-sIFT8MhIkwQ/6xwGCrMgKEaZ2FqiYJ0mkA" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Guardar como' /&gt;" SearchSteps="FuzzySelector, CV" Version="V6" WaitForReadyArgument="Interactive">
                     <uix:TargetAnchorable.Anchors>
@@ -146,9 +146,11 @@
                 </uix:NTypeInto.Target>
                 <uix:NTypeInto.VerifyOptions>
                   <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                    <uix:VerifyExecutionTypeIntoOptions.Retry>
-                      <InArgument x:TypeArguments="x:Boolean" />
-                    </uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" />
+                      </InArgument>
+                    </uix:VerifyExecutionTypeIntoOptions.ExpectedText>
                     <uix:VerifyExecutionTypeIntoOptions.Timeout>
                       <InArgument x:TypeArguments="x:Double" />
                     </uix:VerifyExecutionTypeIntoOptions.Timeout>

@@ -133,7 +133,7 @@
       <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="698,652.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="750,1968.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="magicLink">
         <Variable.Default>
@@ -147,14 +147,14 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Login - Ingreso a Alegra Contabilidad" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="451.2,424" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V2">
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Login - Ingreso a Alegra Contabilidad" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1740" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1546.4" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="cotinueExtraction" />
             </Sequence.Variables>
@@ -163,9 +163,9 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Ingresar desde mi correo'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,1152" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'Ingresar desde mi correo'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,1372.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V5">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,749.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,938.4" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="ugm:GmailMessage" Name="lastEmail" />
                   </Sequence.Variables>
@@ -175,12 +175,12 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Ingresar desde mi correo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V5">
+                  <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'Ingresar desde mi correo'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V5">
                     <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/country/colombia" CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" ContentHash="ZQ6OnuCMU0ac42Cvt-Eg2w" CvElementArea="786, 728, 365, 53" CvType="Button" DesignTimeRectangle="790, 730, 358, 48" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='magic-link-btn' tag='BUTTON' /&gt;" Guid="8c89b0a8-4a00-413a-9a8e-b42c31b8ba50" InformativeScreenshot="8bb5bd28a1f5f5d3e5d5475725439790.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/lcOD9BkJnkWa_psO7sWP8A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/country/colombia" CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" ContentHash="BAfGjnwrAESWIKoRiVXa2g" CvElementArea="786, 728, 365, 53" CvType="Button" DesignTimeRectangle="243, 293, 22, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='magic-link-btn' tag='BUTTON' /&gt;" Guid="8c89b0a8-4a00-413a-9a8e-b42c31b8ba50" InformativeScreenshot="39f4c53c6ca8d3a85ce71108d8724363.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/lcOD9BkJnkWa_psO7sWP8A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" CvElementArea="786, 728, 365, 53" CvType="Button" DesignTimeRectangle="856, 742, 24, 24" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='magic-link-btn' tag='svg' /&gt;" Guid="8e32c40f-bc70-4533-b146-7defd74f0bf9" SearchSteps="Selector, CV" />
+                            <uix:Target CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" DesignTimeRectangle="16, 278, 255, 57" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='magic-link-btn' tag='svg' /&gt;" Guid="8e32c40f-bc70-4533-b146-7defd74f0bf9" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
                       </uix:TargetAnchorable>
@@ -192,7 +192,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Text="russiporras@gmail.com" Version="V5">
+                  <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Text="russiporras@gmail.com" Version="V5">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/magic-link" CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" ContentHash="FUubuvmKQE6qMdg2FOanEw" DesignTimeRectangle="791, 463, 356, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email-input' tag='INPUT' type='text' class='s-input__input' placeholder='Indica tu correo electrónico' aaname='Correo electrónico' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fbdf6bd9-aab3-4443-93d1-8da8295d3489" InformativeScreenshot="9e67ef396a5ca0882d5dbc413c93a466.jpg" IsResponsive="True" Reference="ryTY7yfCSU-sIFT8MhIkwQ/_Uz2UEtzr0SbxUY8EN1lVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -204,9 +204,11 @@
                     </uix:NTypeInto.Target>
                     <uix:NTypeInto.VerifyOptions>
                       <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionTypeIntoOptions.Retry>
+                        <uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" />
+                          </InArgument>
+                        </uix:VerifyExecutionTypeIntoOptions.ExpectedText>
                         <uix:VerifyExecutionTypeIntoOptions.Timeout>
                           <InArgument x:TypeArguments="x:Double" />
                         </uix:VerifyExecutionTypeIntoOptions.Timeout>
@@ -214,7 +216,7 @@
                     </uix:NTypeInto.VerifyOptions>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -230,7 +232,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </uix:NClick>
-                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="486.4,1012.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                  <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                     <ui:RetryScope.ActivityBody>
                       <ActivityAction>
                         <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="484.8,828" sap2010:WorkflowViewState.IdRef="Sequence_16">
@@ -361,22 +363,22 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/country/colombia" CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" ContentHash="ZQ6OnuCMU0ac42Cvt-Eg2w" CvElementArea="786, 728, 365, 53" CvType="Button" DesignTimeRectangle="790, 730, 358, 48" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='magic-link-btn' tag='BUTTON' /&gt;" Guid="8c89b0a8-4a00-413a-9a8e-b42c31b8ba50" InformativeScreenshot="8bb5bd28a1f5f5d3e5d5475725439790.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/lcOD9BkJnkWa_psO7sWP8A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/country/colombia" CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" ContentHash="BAfGjnwrAESWIKoRiVXa2g" CvElementArea="786, 728, 365, 53" CvType="Button" DesignTimeRectangle="243, 293, 22, 23" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl id='magic-link-btn' tag='BUTTON' /&gt;" Guid="8c89b0a8-4a00-413a-9a8e-b42c31b8ba50" InformativeScreenshot="39f4c53c6ca8d3a85ce71108d8724363.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/lcOD9BkJnkWa_psO7sWP8A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" CvElementArea="786, 728, 365, 53" CvType="Button" DesignTimeRectangle="856, 742, 24, 24" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='magic-link-btn' tag='svg' /&gt;" Guid="8e32c40f-bc70-4533-b146-7defd74f0bf9" SearchSteps="Selector, CV" />
+                      <uix:Target CVScreenId="461bbfc3-f3f0-4c67-9ba4-0dc8f7794145" DesignTimeRectangle="16, 278, 255, 57" ElementType="Icon" FullSelectorArgument="&lt;webctrl parentid='magic-link-btn' tag='svg' /&gt;" Guid="8e32c40f-bc70-4533-b146-7defd74f0bf9" SearchSteps="Selector" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NGoToUrl DisplayName="Go To URL - alegra.com" sap:VirtualizedContainerService.HintSize="416,113.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Url="https://app.alegra.com/invoice" Version="V5" />
+            <uix:NGoToUrl DisplayName="Go To URL - alegra.com" sap:VirtualizedContainerService.HintSize="451.2,113.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Url="https://app.alegra.com/invoice" Version="V5" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
