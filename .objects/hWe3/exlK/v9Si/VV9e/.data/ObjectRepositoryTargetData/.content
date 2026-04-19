@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="Atala7K1g0CxzdUZ_CKsvA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="47e4ae59-d05d-4fa3-83f7-d399c66baa99" DesignTimeRectangle="254, 127, 87, 29" ElementType="Button" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;wnd aaname='Confirmar Guardar como' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Sí' cls='Button' title='&amp;amp;Sí' /&gt;" Guid="70c24f4c-3f0b-4217-b5e9-60c065304bde" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Confirmar Guardar como' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="47e4ae59-d05d-4fa3-83f7-d399c66baa99" DesignTimeRectangle="349, 127, 87, 29" ElementType="Button" FuzzySelectorArgument="&lt;wnd aaname='Confirmar Guardar como' cls='DirectUIHWND' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;&lt;wnd aaname='No' cls='Button' title='&amp;amp;No' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:title='fuzzy' fuzzylevel:title='0.0' check:text='&amp;amp;No' /&gt;" Guid="d5a025f3-35ff-428b-9ebf-e32cf99be838" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="62cf4a012f20157afad67dc6c9009aa6.jpg" xmlns="">0jllept4dZEWucYFHLGhmCQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -123,7 +123,7 @@
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Invoke GetTransactionData workflow" sap:VirtualizedContainerService.HintSize="416,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Framework/GetTransactionData.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <OutArgument x:TypeArguments="x:String" x:Key="out_transactionRow" />
-          <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">[TransactionNumber]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="io_TransactionNumber">[TransactionNumber]</InArgument>
           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
           <OutArgument x:TypeArguments="sd:DataRow" x:Key="out_TransactionItem" />
           <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionField1" />

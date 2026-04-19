@@ -1,7 +1,7 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetTransactionData" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_transactionRow" Type="OutArgument(x:String)" />
-    <x:Property sap2010:Annotation.AnnotationText="Sequential counter of transaction items." Name="in_TransactionNumber" Type="InArgument(x:Int32)" />
+    <x:Property sap2010:Annotation.AnnotationText="Sequential counter of transaction items." Name="io_TransactionNumber" Type="InOutArgument(x:Int32)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="out_TransactionItem" Type="OutArgument(sd:DataRow)" />
     <x:Property sap2010:Annotation.AnnotationText="Allow the optional addition of information about the transaction item." Name="out_TransactionField1" Type="OutArgument(x:String)" />
@@ -114,9 +114,10 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>FacturasAlegra_Dispatcher.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="°Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="810.8000000000001,1144" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="°Get a transaction item from a specified source (e.g., Orchestrator queues, spreadsheets, databases, mailboxes or web APIs). &#xA;&#xA;If there are no transaction items remaining, out_TransactionItem is set to Nothing, which leads to the End Process state. &#xA;&#xA;For cases in which there is only a single transaction (i.e., a linear process), use an If activity to check whether the argument in_TransactionNumber has the value 1 (meaning it is the first and only transaction) and assign the transaction item to out_TransactionItem. For any other value of in_TransactionNumber, out_TransactionItem should be set to Nothing.&#xA;&#xA;If there are multiple transactions, use the argument in_TransactionNumber as an index to retrieve the correct transaction to be processed. If there are no more transactions left, it is necessary to set out_TransactionItem to Nothing, thus ending the process." DisplayName="Get Transaction Data" sap:VirtualizedContainerService.HintSize="750,1144" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -124,7 +125,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Get Transaction Item" sap:VirtualizedContainerService.HintSize="451.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Get the transaction item&quot;]" />
-    <If Condition="[in_TransactionNumber&lt; io_dt_TransactionData.RowCount]" sap:VirtualizedContainerService.HintSize="451.2,764" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[io_TransactionNumber&lt; io_dt_TransactionData.RowCount]" sap:VirtualizedContainerService.HintSize="451.2,764" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,400" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -137,15 +138,15 @@
               <OutArgument x:TypeArguments="sd:DataRow">[out_TransactionItem]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="sd:DataRow">[io_dt_TransactionData(in_transactionNumber)]</InArgument>
+              <InArgument x:TypeArguments="sd:DataRow">[io_dt_TransactionData(io_TransactionNumber)]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+          <Assign sap:VirtualizedContainerService.HintSize="416,165.6" sap2010:WorkflowViewState.IdRef="Assign_11">
             <Assign.To>
-              <OutArgument x:TypeArguments="x:Int32">[in_TransactionNumber]</OutArgument>
+              <OutArgument x:TypeArguments="x:Int32">[io_TransactionNumber]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:Int32">[in_TransactionNumber+1]</InArgument>
+              <InArgument x:TypeArguments="x:Int32">[io_TransactionNumber+1]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>

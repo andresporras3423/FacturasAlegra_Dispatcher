@@ -30,9 +30,10 @@ namespace FacturasAlegra_Dispatcher
         /// Invokes the DownloadFile.xaml
         /// </summary>
         /// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public void DownloadFile(string in_path, System.Boolean isolated = false)
+        public bool DownloadFile(string in_path, System.Boolean isolated = false)
         {
             var result = _services.WorkflowInvocationService.RunWorkflow(@"DownloadFile.xaml", new Dictionary<string, object> { { "in_path", in_path } }, default, isolated, default, GetAssemblyName());
+            return (bool)result["out_downloadSucess"];
         }
 
         /// <summary>
@@ -49,10 +50,10 @@ namespace FacturasAlegra_Dispatcher
         /// Invokes the Framework/GetTransactionData.xaml
         /// </summary>
         /// <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
-        public (string out_transactionRow, System.Data.DataRow out_TransactionItem, string out_TransactionField1, string out_TransactionField2, string out_TransactionID, System.Data.DataTable io_dt_TransactionData) GetTransactionData(int in_TransactionNumber, System.Collections.Generic.Dictionary<string, object> in_Config, System.Data.DataTable io_dt_TransactionData, System.Boolean isolated = false)
+        public (string out_transactionRow, System.Data.DataRow out_TransactionItem, string out_TransactionField1, string out_TransactionField2, string out_TransactionID, int io_TransactionNumber, System.Data.DataTable io_dt_TransactionData) GetTransactionData(System.Collections.Generic.Dictionary<string, object> in_Config, int io_TransactionNumber, System.Data.DataTable io_dt_TransactionData, System.Boolean isolated = false)
         {
-            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\GetTransactionData.xaml", new Dictionary<string, object> { { "in_TransactionNumber", in_TransactionNumber }, { "in_Config", in_Config }, { "io_dt_TransactionData", io_dt_TransactionData } }, default, isolated, default, GetAssemblyName());
-            return ((string)result["out_transactionRow"], (System.Data.DataRow)result["out_TransactionItem"], (string)result["out_TransactionField1"], (string)result["out_TransactionField2"], (string)result["out_TransactionID"], (System.Data.DataTable)result["io_dt_TransactionData"]);
+            var result = _services.WorkflowInvocationService.RunWorkflow(@"Framework\GetTransactionData.xaml", new Dictionary<string, object> { { "in_Config", in_Config }, { "io_TransactionNumber", io_TransactionNumber }, { "io_dt_TransactionData", io_dt_TransactionData } }, default, isolated, default, GetAssemblyName());
+            return ((string)result["out_transactionRow"], (System.Data.DataRow)result["out_TransactionItem"], (string)result["out_TransactionField1"], (string)result["out_TransactionField2"], (string)result["out_TransactionID"], (int)result["io_TransactionNumber"], (System.Data.DataTable)result["io_dt_TransactionData"]);
         }
 
         /// <summary>

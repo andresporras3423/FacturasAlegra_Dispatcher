@@ -22,7 +22,7 @@
             </summary>
             <param name="isolated">Indicates whether to isolate executions (run them within a different process)</param>
         </member>
-        <member name="M:FacturasAlegra_Dispatcher.WorkflowRunnerService.GetTransactionData(System.Int32,System.Collections.Generic.Dictionary{System.String,System.Object},System.Data.DataTable,System.Boolean)">
+        <member name="M:FacturasAlegra_Dispatcher.WorkflowRunnerService.GetTransactionData(System.Collections.Generic.Dictionary{System.String,System.Object},System.Int32,System.Data.DataTable,System.Boolean)">
             <summary>
             Invokes the Framework/GetTransactionData.xaml
             </summary>

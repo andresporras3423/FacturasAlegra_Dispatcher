@@ -357,6 +357,35 @@ namespace FacturasAlegra_Dispatcher._Implementation
 
     namespace ___Guardar_como._Guardar_como
     {
+        public class ___Sí : IElementDescriptor
+        {
+            private readonly IScreenDescriptor _screenDescriptor;
+            private readonly IElementDescriptor _parentElementDescriptor;
+            private readonly IElementDescriptorDefinition _elementDescriptor;
+
+            public IElementDescriptorDefinition GetDefinition()
+            {
+                return _elementDescriptor;
+            }
+
+            public ___Sí(IScreenDescriptor screenDescriptor, IElementDescriptor parentElementDescriptor)
+            {
+                _screenDescriptor = screenDescriptor;
+                _parentElementDescriptor = parentElementDescriptor;
+                _elementDescriptor = new ElementDescriptorDefinition
+                {
+                    Reference = "ryTY7yfCSU-sIFT8MhIkwQ/VV9eZOWknkStR0PU-4ueKw",
+                    DisplayName = "&Sí",
+                    Element = this,
+                    ParentElement = _parentElementDescriptor,
+                    Screen = screenDescriptor
+                };
+            }
+        }
+    }
+
+    namespace ___Guardar_como._Guardar_como
+    {
         public class __Nombre_de_archivo : IElementDescriptor
         {
             private readonly IScreenDescriptor _screenDescriptor;
@@ -404,10 +433,12 @@ namespace FacturasAlegra_Dispatcher._Implementation
                     Screen = this
                 };
                 _Guardar = new _Implementation.___Guardar_como._Guardar_como.___Guardar(this, null);
+                _Sí = new _Implementation.___Guardar_como._Guardar_como.___Sí(this, null);
                 Nombre_de_archivo = new _Implementation.___Guardar_como._Guardar_como.__Nombre_de_archivo(this, null);
             }
 
             public _Implementation.___Guardar_como._Guardar_como.___Guardar _Guardar { get; private set; }
+            public _Implementation.___Guardar_como._Guardar_como.___Sí _Sí { get; private set; }
             public _Implementation.___Guardar_como._Guardar_como.__Nombre_de_archivo Nombre_de_archivo { get; private set; }
         }
     }

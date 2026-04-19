@@ -47,6 +47,9 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Platform.SyncObjects</x:String>
       <x:String>FacturasAlegra_Dispatcher</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -118,11 +121,20 @@
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
       <AssemblyReference>FacturasAlegra_Dispatcher.Core</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="750,1662.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="750,2052.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="dictItem" />
+      <Variable x:TypeArguments="x:Boolean" Name="result">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">IsMatch_1</x:String>
+            <x:String x:Key="SourcePropertyName">Result</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -130,86 +142,122 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="494.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <If Condition="[in_TransactionItem(&quot;Estado&quot;).ToString&lt;&gt;&quot;Anulada&quot;]" sap:VirtualizedContainerService.HintSize="494.4,1308" sap2010:WorkflowViewState.IdRef="If_1">
+    <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="529.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
+    <If Condition="[in_TransactionItem(&quot;Estado&quot;).ToString&lt;&gt;&quot;Anulada&quot;]" sap:VirtualizedContainerService.HintSize="529.6,1698.4" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="492.8,1080" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="528,1470.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:Boolean" Name="downloadSucess" />
+          </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome Facturas de venta" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="459.2,1020" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="77677ddc-23a2-479a-a4d0-937289882439" Version="V2">
-            <uix:NApplicationCard.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="457.6,826.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="x:String" Default="C:\Users\DELL\Documents\facturasAlegra" Name="FolderFacturasAlegra" />
-                    <Variable x:TypeArguments="x:String" Name="facturaPath" />
-                  </Sequence.Variables>
+          <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="494.4,1188" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="6">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="492.8,971.2" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DisplayName="Click 'Descargar PDF'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="424,193.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="77677ddc-23a2-479a-a4d0-937289882439" Version="V5">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="chatgpt.com/g/g-p-6803eaad2e548191b719de0fa036da85/c/69d477c1-0da8-83e9-822e-e5f872c6d332" CVScreenId="5b79b300-7f09-416e-a778-b4e6021cc1fe" ContentHash="uMSK4hAoD0u8SfUAgfbEjw" CvElementArea="798, 314, 156, 35" CvTextArea="844, 324, 88, 16" CvTextArgument="Descargar PDF" CvType="Button" DesignTimeRectangle="846, 323, 85, 16" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Descargar PDF' parentid='button_download_pdf' tag='SPAN' /&gt;" Guid="80af6c53-9f81-40e6-b5c3-0939e1e536b7" InformativeScreenshot="14ac083a94feba6c30b5cf80be203ff9.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/PespI0M9zEqeJcXsXPD9NQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Factura de venta PL358' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                  <Assign sap:VirtualizedContainerService.HintSize="424,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[facturaPath]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[Path.Combine(in_Config("FolderFacturasAlegra").ToString,in_TransactionItem("Número").ToString)]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DownloadFile - Invoke Workflow File (DownloadFile.xaml)" sap:VirtualizedContainerService.HintSize="424,176" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DownloadFile.xaml">
-                    <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_path">[facturaPath]</InArgument>
-                    </ui:InvokeWorkflowFile.Arguments>
-                  </ui:InvokeWorkflowFile>
-                  <Assign sap:VirtualizedContainerService.HintSize="424,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dictItem]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[in_TransactionItem.ToDictionary]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <ui:AddQueueItem TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="oscarporras02@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="424,48" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" ItemInformationCollection="[dictItem]" Priority="Normal" QueueType="facturasAlegra">
-                    <ui:AddQueueItem.ItemInformation>
-                      <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-                    </ui:AddQueueItem.ItemInformation>
+                  <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome Facturas de venta" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="459.2,911.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="77677ddc-23a2-479a-a4d0-937289882439" Version="V2">
+                    <uix:NApplicationCard.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="457.6,717.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Default="C:\Users\DELL\Documents\facturasAlegra" Name="FolderFacturasAlegra" />
+                            <Variable x:TypeArguments="x:String" Name="facturaPath" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="424,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                          <uix:NClick ActivateBefore="{x:Null}" ClickType="Single" DelayBefore="5" DisplayName="Click 'Descargar PDF'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="424,193.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="77677ddc-23a2-479a-a4d0-937289882439" Version="V5">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="chatgpt.com/g/g-p-6803eaad2e548191b719de0fa036da85/c/69d477c1-0da8-83e9-822e-e5f872c6d332" CVScreenId="5b79b300-7f09-416e-a778-b4e6021cc1fe" ContentHash="0DiwssvguUCUjhApg4td3A" CvElementArea="798, 314, 156, 35" CvTextArea="844, 324, 88, 16" CvTextArgument="Descargar PDF" CvType="Button" DesignTimeRectangle="846, 323, 85, 16" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aaname='Descargar PDF' parentid='button_download_pdf' tag='SPAN' /&gt;" Guid="80af6c53-9f81-40e6-b5c3-0939e1e536b7" InformativeScreenshot="14ac083a94feba6c30b5cf80be203ff9.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/PespI0M9zEqeJcXsXPD9NQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Factura de venta PL358' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                          <Assign sap:VirtualizedContainerService.HintSize="424,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[facturaPath]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[Path.Combine(in_Config("FolderFacturasAlegra").ToString,in_TransactionItem("Número").ToString)]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="DownloadFile - Invoke Workflow File (DownloadFile.xaml)" sap:VirtualizedContainerService.HintSize="424,167.2" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="DownloadFile.xaml">
+                            <ui:InvokeWorkflowFile.Arguments>
+                              <InArgument x:TypeArguments="x:String" x:Key="in_path">[facturaPath]</InArgument>
+                              <OutArgument x:TypeArguments="x:Boolean" x:Key="out_downloadSucess">[downloadSucess]</OutArgument>
+                            </ui:InvokeWorkflowFile.Arguments>
+                          </ui:InvokeWorkflowFile>
+                        </Sequence>
+                      </ActivityAction>
+                    </uix:NApplicationCard.Body>
+                    <uix:NApplicationCard.OCREngine>
+                      <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
+                        <ActivityFunc.Argument>
+                          <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
+                        </ActivityFunc.Argument>
+                      </ActivityFunc>
+                    </uix:NApplicationCard.OCREngine>
+                    <uix:NApplicationCard.TargetApp>
+                      <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="KL48WhDC1kSAekgcxAgSmw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAA7lJREFUaEPVWU1uEzEU9hF6A3IEjtAj9AbkBvQG7Q3aHRLMZCqxYuUkEDYgDSAQZZMs0kVVVE2bRbNo0YAQC9gM+jx1sJ89M/b8JOGTvkU8b+zv+b3nnwljbYBHO4yHfTYKj9g45GwUJmwUpmwUZgoTNh7Ewga2/EmPdrNeQPTL6OBelCrUg4PZ+p2Rws0ZbsZxGHXvSBfCKTFG6+BRT4SbDtYdk/ai8WrwqPNZtzNlPNijcvyQpwzteL2snVLbIF7S2wmEjnayaSKVnSAKdiM5X8XUrbDzXZS+vCUczKhcHR3m/c7r50ZbLfJnh1R2jjx1zBdqEoL70/dZtPiapX9+Z4fnU+M5fceRqTgNGBiGkcXYmRC0+2mSHV2eZfHtMqPoTz9o9vvz0yz59dNod6IRhYazD9GY5TJQofHdPydrOEKikB+FqZEzdz9ONLE2qAIRLRvgCPqi/VupRaGFcw4GLwNSRtoWOYw+nGsDx/h89v3TJ1pcGG0QWAa1iG22EN9788Lot5QijTzTB/kOqDMKYubK6kB1+mRxQR9nD99xY6xK8qd9HBuOjQcFRB5rg8b6oPvzz9pzFcPl1cpOLWBAjQ6iwJdXbrUA7a5XQnRM81zk7ETPWWojgXZpQ1cg2f54frqK4vHlmaHBIA+GWP+djg5FwuLbG82uqECBB/c5rqYQNju0HZxPNVs4QjVYmODsQxsN0s4pUBeqPWbPBlk36nNEVk1NCJ/9+Jbx5bVLUaeVDux9ebvqvAxwUr6DgrZFTEZLRgk7Nn7DFkXulPeURoNCW96XQXWi6F3UjFyxULwQXUu4ZNnZ33amqUKVE3LFQRohdZw3riIWFXFV3pehzAnMPNpk7tNxPZkwNgzwKVB7gM6bYvb9TitCzLyErAWHIi3nMIgLNzIsbzT8vsD76ixDsFxC1SjVptjIKo4SbTiCWlJnWzrSOIWgXRyI6AML23CE31wbK06jNFpd8h2PEyAcoWcZX8h1HxsbHMJBzt8R9YKPy4FhUE6ZBk2ighUJk4FDoPdyKtJn5YBIo8L9oIqYRYjA9o9jgA0QC2dhA1u84y1apfGNqEYUqijXe9remPgvwUDDKKyVxuxLdBCF1ml8UqFo4YLfIRMq18R//3EXqNidN0Lvf2u2qR4q874I2+BEbfES+b81m6iJVN9tmyAvbOvFpxviH3zXgvVB9ymVNk+ZKiAaPDixDN6EuXDrHxddQTgS9tkwqL/x4Uq4duE2SGdwxRsHseVDQSraxgEXNsK2HdF/ATAm8tos/Fv4AAAAAElFTkSuQmCC" InformativeScreenshot="6862ec7a61f11a3df8c7354042459a11.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/KNxWHCspMUa8Z6HHeHBU2w" Selector="&lt;html app='chrome.exe' title='Factura de venta*' /&gt;" Url="[in_TransactionItem(&quot;Url&quot;).ToString]" Version="V2">
+                        <uix:TargetApp.Arguments>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.Arguments>
+                        <uix:TargetApp.WorkingDirectory>
+                          <InArgument x:TypeArguments="x:String" />
+                        </uix:TargetApp.WorkingDirectory>
+                      </uix:TargetApp>
+                    </uix:NApplicationCard.TargetApp>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:AddQueueItem>
+                  </uix:NApplicationCard>
                 </Sequence>
               </ActivityAction>
-            </uix:NApplicationCard.Body>
-            <uix:NApplicationCard.OCREngine>
-              <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd2:Rectangle, x:String))">
-                <ActivityFunc.Argument>
-                  <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                </ActivityFunc.Argument>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean">
+                <ui:IsMatch DisplayName="Is Text Matching" sap:VirtualizedContainerService.HintSize="468.8,60" sap2010:WorkflowViewState.IdRef="IsMatch_1" Input="[downloadSucess.ToString]" IsBuilderTabModified="False" Pattern="true" RegexOption="IgnoreCase, Compiled" Result="[result]" />
               </ActivityFunc>
-            </uix:NApplicationCard.OCREngine>
-            <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" ContentHash="gSDWHwq5akmDC39FK2AhxA" IconBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAALEgAACxIB0t1+/AAAA7lJREFUaEPVWU1uEzEU9hF6A3IEjtAj9AbkBvQG7Q3aHRLMZCqxYuUkEDYgDSAQZZMs0kVVVE2bRbNo0YAQC9gM+jx1sJ89M/b8JOGTvkU8b+zv+b3nnwljbYBHO4yHfTYKj9g45GwUJmwUpmwUZgoTNh7Ewga2/EmPdrNeQPTL6OBelCrUg4PZ+p2Rws0ZbsZxGHXvSBfCKTFG6+BRT4SbDtYdk/ai8WrwqPNZtzNlPNijcvyQpwzteL2snVLbIF7S2wmEjnayaSKVnSAKdiM5X8XUrbDzXZS+vCUczKhcHR3m/c7r50ZbLfJnh1R2jjx1zBdqEoL70/dZtPiapX9+Z4fnU+M5fceRqTgNGBiGkcXYmRC0+2mSHV2eZfHtMqPoTz9o9vvz0yz59dNod6IRhYazD9GY5TJQofHdPydrOEKikB+FqZEzdz9ONLE2qAIRLRvgCPqi/VupRaGFcw4GLwNSRtoWOYw+nGsDx/h89v3TJ1pcGG0QWAa1iG22EN9788Lot5QijTzTB/kOqDMKYubK6kB1+mRxQR9nD99xY6xK8qd9HBuOjQcFRB5rg8b6oPvzz9pzFcPl1cpOLWBAjQ6iwJdXbrUA7a5XQnRM81zk7ETPWWojgXZpQ1cg2f54frqK4vHlmaHBIA+GWP+djg5FwuLbG82uqECBB/c5rqYQNju0HZxPNVs4QjVYmODsQxsN0s4pUBeqPWbPBlk36nNEVk1NCJ/9+Jbx5bVLUaeVDux9ebvqvAxwUr6DgrZFTEZLRgk7Nn7DFkXulPeURoNCW96XQXWi6F3UjFyxULwQXUu4ZNnZ33amqUKVE3LFQRohdZw3riIWFXFV3pehzAnMPNpk7tNxPZkwNgzwKVB7gM6bYvb9TitCzLyErAWHIi3nMIgLNzIsbzT8vsD76ixDsFxC1SjVptjIKo4SbTiCWlJnWzrSOIWgXRyI6AML23CE31wbK06jNFpd8h2PEyAcoWcZX8h1HxsbHMJBzt8R9YKPy4FhUE6ZBk2ighUJk4FDoPdyKtJn5YBIo8L9oIqYRYjA9o9jgA0QC2dhA1u84y1apfGNqEYUqijXe9remPgvwUDDKKyVxuxLdBCF1ml8UqFo4YLfIRMq18R//3EXqNidN0Lvf2u2qR4q874I2+BEbfES+b81m6iJVN9tmyAvbOvFpxviH3zXgvVB9ymVNk+ZKiAaPDixDN6EuXDrHxddQTgS9tkwqL/x4Uq4duE2SGdwxRsHseVDQSraxgEXNsK2HdF/ATAm8tos/Fv4AAAAAElFTkSuQmCC" InformativeScreenshot="6862ec7a61f11a3df8c7354042459a11.jpg" Reference="ryTY7yfCSU-sIFT8MhIkwQ/KNxWHCspMUa8Z6HHeHBU2w" Selector="&lt;html app='chrome.exe' title='Factura de venta*' /&gt;" Url="[in_TransactionItem(&quot;Url&quot;).ToString]" Version="V2" />
-            </uix:NApplicationCard.TargetApp>
-          </uix:NApplicationCard>
+            </ui:RetryScope.Condition>
+          </ui:RetryScope>
+          <Assign sap:VirtualizedContainerService.HintSize="494.4,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[dictItem]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[in_TransactionItem.ToDictionary]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:AddQueueItem TimeoutMS="{x:Null}" DisplayName="Add Queue Item" FolderPath="oscarporras02@gmail.com's workspace" sap:VirtualizedContainerService.HintSize="494.4,48" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" ItemInformationCollection="[dictItem]" Priority="Normal" QueueType="facturasAlegra">
+            <ui:AddQueueItem.ItemInformation>
+              <scg:Dictionary x:TypeArguments="x:String, InArgument" />
+            </ui:AddQueueItem.ItemInformation>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:AddQueueItem>
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="492.8,89.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="528,89.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -218,6 +266,6 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="494.4,79.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
+    <ui:Comment DisplayName="Comment (placeholder)" sap:VirtualizedContainerService.HintSize="529.6,79.2" sap2010:WorkflowViewState.IdRef="Comment_1" Text="//  Invoke steps of the process" />
   </Sequence>
 </Activity>
