@@ -150,6 +150,35 @@ namespace FacturasAlegra_Dispatcher._Implementation
 
     namespace ___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad
     {
+        public class __factura_de_venta : IElementDescriptor
+        {
+            private readonly IScreenDescriptor _screenDescriptor;
+            private readonly IElementDescriptor _parentElementDescriptor;
+            private readonly IElementDescriptorDefinition _elementDescriptor;
+
+            public IElementDescriptorDefinition GetDefinition()
+            {
+                return _elementDescriptor;
+            }
+
+            public __factura_de_venta(IScreenDescriptor screenDescriptor, IElementDescriptor parentElementDescriptor)
+            {
+                _screenDescriptor = screenDescriptor;
+                _parentElementDescriptor = parentElementDescriptor;
+                _elementDescriptor = new ElementDescriptorDefinition
+                {
+                    Reference = "ryTY7yfCSU-sIFT8MhIkwQ/wb3CSagpPUeFSZ4R-nANow",
+                    DisplayName = "factura de venta",
+                    Element = this,
+                    ParentElement = _parentElementDescriptor,
+                    Screen = screenDescriptor
+                };
+            }
+        }
+    }
+
+    namespace ___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad
+    {
         public class __Ingresar_desde_mi_correo : IElementDescriptor
         {
             private readonly IScreenDescriptor _screenDescriptor;
@@ -169,6 +198,35 @@ namespace FacturasAlegra_Dispatcher._Implementation
                 {
                     Reference = "ryTY7yfCSU-sIFT8MhIkwQ/lcOD9BkJnkWa_psO7sWP8A",
                     DisplayName = "Ingresar desde mi correo",
+                    Element = this,
+                    ParentElement = _parentElementDescriptor,
+                    Screen = screenDescriptor
+                };
+            }
+        }
+    }
+
+    namespace ___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad
+    {
+        public class __ingresos : IElementDescriptor
+        {
+            private readonly IScreenDescriptor _screenDescriptor;
+            private readonly IElementDescriptor _parentElementDescriptor;
+            private readonly IElementDescriptorDefinition _elementDescriptor;
+
+            public IElementDescriptorDefinition GetDefinition()
+            {
+                return _elementDescriptor;
+            }
+
+            public __ingresos(IScreenDescriptor screenDescriptor, IElementDescriptor parentElementDescriptor)
+            {
+                _screenDescriptor = screenDescriptor;
+                _parentElementDescriptor = parentElementDescriptor;
+                _elementDescriptor = new ElementDescriptorDefinition
+                {
+                    Reference = "ryTY7yfCSU-sIFT8MhIkwQ/Oos_UKAJ2UiZFfzn7xUVFQ",
+                    DisplayName = "ingresos",
                     Element = this,
                     ParentElement = _parentElementDescriptor,
                     Screen = screenDescriptor
@@ -257,7 +315,9 @@ namespace FacturasAlegra_Dispatcher._Implementation
                 Correo_electrónico = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Correo_electrónico(this, null);
                 Enviar_link_mágico = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Enviar_link_mágico(this, null);
                 Extract_Table_Data = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Extract_Table_Data(this, null);
+                factura_de_venta = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__factura_de_venta(this, null);
                 Ingresar_desde_mi_correo = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Ingresar_desde_mi_correo(this, null);
+                ingresos = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__ingresos(this, null);
                 Label = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Label(this, null);
                 svg = new _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__svg(this, null);
             }
@@ -265,7 +325,9 @@ namespace FacturasAlegra_Dispatcher._Implementation
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Correo_electrónico Correo_electrónico { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Enviar_link_mágico Enviar_link_mágico { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Extract_Table_Data Extract_Table_Data { get; private set; }
+            public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__factura_de_venta factura_de_venta { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Ingresar_desde_mi_correo Ingresar_desde_mi_correo { get; private set; }
+            public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__ingresos ingresos { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__Label Label { get; private set; }
             public _Implementation.___Chrome_Login___Ingreso_a_Alegra_Contabilidad._Chrome_Login___Ingreso_a_Alegra_Contabilidad.__svg svg { get; private set; }
         }

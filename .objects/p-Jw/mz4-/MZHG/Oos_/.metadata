@@ -1,0 +1,14 @@
+﻿{
+  "Name": "ingresos",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "Oos_UKAJ2UiZFfzn7xUVFQ",
+  "Reference": "ryTY7yfCSU-sIFT8MhIkwQ/Oos_UKAJ2UiZFfzn7xUVFQ",
+  "ParentRef": "ryTY7yfCSU-sIFT8MhIkwQ/MZHGqS0Tv0aj8gXxKje8KQ",
+  "Created": "2026-04-26T21:43:03.0017892Z",
+  "Updated": "2026-04-26T21:43:03.0017892Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

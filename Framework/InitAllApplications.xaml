@@ -134,7 +134,7 @@
       <AssemblyReference>FacturasAlegra_Dispatcher.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="750,1912" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="756.4000000000001,1789.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="magicLink">
         <Variable.Default>
@@ -149,13 +149,13 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="486.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Never]" DisplayName="Chrome Login - Ingreso a Alegra Contabilidad" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1683.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="[UiPath.UIAutomationNext.Enums.NAppCloseMode.Always]" DisplayName="Chrome Login - Ingreso a Alegra Contabilidad" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="486.4,1560.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="[UiPath.UIAutomationNext.Enums.NAppOpenMode.Always]" ScopeGuid="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1489.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="484.8,1367.2" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="cotinueExtraction" />
             </Sequence.Variables>
@@ -164,7 +164,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'Ingresar desde mi correo'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,1316" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V5">
+            <uix:NCheckState DisplayName="Check App State 'Ingresar desde mi correo'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="451.2,1307.2" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Version="V5">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,881.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
                   <Sequence.Variables>
@@ -178,7 +178,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="Single" ClipboardMode="Never" DisplayName="Type Into 'Correo electrónico'" EmptyFieldMode="SingleLine" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,245.6" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="SameAsCard" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Text="russiporras@gmail.com" Version="V5">
                     <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/magic-link" CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" ContentHash="FUubuvmKQE6qMdg2FOanEw" DesignTimeRectangle="791, 463, 356, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email-input' tag='INPUT' type='text' class='s-input__input' placeholder='Indica tu correo electrónico' aaname='Correo electrónico' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fbdf6bd9-aab3-4443-93d1-8da8295d3489" InformativeScreenshot="9e67ef396a5ca0882d5dbc413c93a466.jpg" IsResponsive="True" Reference="ryTY7yfCSU-sIFT8MhIkwQ/_Uz2UEtzr0SbxUY8EN1lVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                      <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/magic-link" CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" ContentHash="oiAu4Pfgk0Od-bUh9-ECJA" DesignTimeRectangle="791, 463, 356, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email-input' tag='INPUT' type='text' class='s-input__input' placeholder='Indica tu correo electrónico' aaname='Correo electrónico' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fbdf6bd9-aab3-4443-93d1-8da8295d3489" InformativeScreenshot="9e67ef396a5ca0882d5dbc413c93a466.jpg" IsResponsive="True" Reference="ryTY7yfCSU-sIFT8MhIkwQ/_Uz2UEtzr0SbxUY8EN1lVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
                         <uix:TargetAnchorable.Anchors>
                           <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" CvTextArea="787, 440, 127, 15" CvTextArgument="Correo electrónico" CvType="Text" DesignTimeRectangle="790, 438, 124, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='s-input__label' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Correo electrónico' /&gt;" Guid="9a0ede24-771a-4053-940e-2c4f53bfeb69" SearchSteps="FuzzySelector, CV" />
@@ -193,6 +193,9 @@
                             <Literal x:TypeArguments="x:String" />
                           </InArgument>
                         </uix:VerifyExecutionTypeIntoOptions.ExpectedText>
+                        <uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionTypeIntoOptions.Retry>
                         <uix:VerifyExecutionTypeIntoOptions.Timeout>
                           <InArgument x:TypeArguments="x:Double" />
                         </uix:VerifyExecutionTypeIntoOptions.Timeout>
@@ -347,7 +350,7 @@
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
-                <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/magic-link" CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" ContentHash="FUubuvmKQE6qMdg2FOanEw" DesignTimeRectangle="791, 463, 356, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email-input' tag='INPUT' type='text' class='s-input__input' placeholder='Indica tu correo electrónico' aaname='Correo electrónico' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fbdf6bd9-aab3-4443-93d1-8da8295d3489" InformativeScreenshot="9e67ef396a5ca0882d5dbc413c93a466.jpg" IsResponsive="True" Reference="ryTY7yfCSU-sIFT8MhIkwQ/_Uz2UEtzr0SbxUY8EN1lVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+                <uix:TargetAnchorable BrowserURL="app.alegra.com/user/login/magic-link" CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" ContentHash="oiAu4Pfgk0Od-bUh9-ECJA" DesignTimeRectangle="791, 463, 356, 38" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl id='email-input' tag='INPUT' type='text' class='s-input__input' placeholder='Indica tu correo electrónico' aaname='Correo electrónico' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="fbdf6bd9-aab3-4443-93d1-8da8295d3489" InformativeScreenshot="9e67ef396a5ca0882d5dbc413c93a466.jpg" IsResponsive="True" Reference="ryTY7yfCSU-sIFT8MhIkwQ/_Uz2UEtzr0SbxUY8EN1lVQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Login - Ingreso a Alegra Contabilidad' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                       <uix:Target CVScreenId="7e6bb8fa-1e71-4096-892d-ee50513c470f" CvTextArea="787, 440, 127, 15" CvTextArgument="Correo electrónico" CvType="Text" DesignTimeRectangle="790, 438, 124, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='s-input__label' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Correo electrónico' /&gt;" Guid="9a0ede24-771a-4053-940e-2c4f53bfeb69" SearchSteps="FuzzySelector, CV" />
@@ -362,7 +365,6 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </uix:NCheckState>
-            <uix:NGoToUrl DisplayName="Go To URL - alegra.com" sap:VirtualizedContainerService.HintSize="451.2,113.6" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" ScopeIdentifier="b9add5fd-38fd-480e-8275-d2cc78df1de1" Url="https://app.alegra.com/invoice" Version="V5" />
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>

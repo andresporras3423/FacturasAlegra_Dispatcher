@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="V0GQUM92HEe2MW4eNKqw2Q" Reference="ryTY7yfCSU-sIFT8MhIkwQ/wb3CSagpPUeFSZ4R-nANow" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.alegra.com" CVScreenId="4a762982-a994-458d-bef9-2289183c2331" CvTextArea="51, 392, 114, 15" CvTextArgument="Factura de venta" CvType="Text" DesignTimeRectangle="53, 383, 111, 33" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='smSidebarSubItem_incomes-invoice-col' tag='SPAN' /&gt;" Guid="7b907b2d-ea08-4c4d-9fed-b983f00f90b3" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Alegra Software Contable' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="b40aad05136d9896cbc3b4a58bdf0954.jpg" xmlns="">01eZHF_ic8EKJs-bKAKFZJQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

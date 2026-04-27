@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="URcSyMxw9kiX83bZJlIcnQ" Reference="ryTY7yfCSU-sIFT8MhIkwQ/Oos_UKAJ2UiZFfzn7xUVFQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="app.alegra.com" CVScreenId="08d145ae-daef-49c3-8863-6239794e19d8" DesignTimeRectangle="53, 349, 178, 21" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl parentid='smSidebarItem_incomes' tag='SPAN' /&gt;" Guid="66a9d169-d76f-45b1-88ab-f5ce8cae4cb2" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Alegra Software Contable' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="[UiPath.UIAutomationNext.Enums.NWaitForReady.Complete]">
+      <imageRef attrName="InformativeScreenshot" originalValue="06707bcdbe88bd72ba853eab9f9a4432.jpg" xmlns="">0PPmoRqHbf0KM43w2d047uw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
